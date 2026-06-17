@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>User Management | RMIMS</title>
+
+<link rel="stylesheet" href="../css/user-management.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ADMINISTRATION</p>
+
+            <a href="user-management.html" class="active">
+                User Management
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>User Management</h2>
+                <span>Manage system users and roles</span>
+            </div>
+
+            <div class="header-actions">
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- USER STATISTICS -->
+
+        <section class="cards">
+
+            <div class="card">
+                <span>Total Users</span>
+                <h2 id="totalUsers">0</h2>
+            </div>
+
+            <div class="card">
+                <span>Administrators</span>
+                <h2 id="totalAdmins">0</h2>
+            </div>
+
+            <div class="card">
+                <span>System Users</span>
+                <h2 id="totalSystemUsers">0</h2>
+            </div>
+
+            <div class="card">
+                <span>Active Users</span>
+                <h2 id="activeUsers">0</h2>
+            </div>
+
+        </section>
+
+        <!-- USER TABLE -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h3>User Accounts</h3>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search User">
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="userTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module"
+src="../js/user-management.js">
+</script>
+
+</body>
+</html>

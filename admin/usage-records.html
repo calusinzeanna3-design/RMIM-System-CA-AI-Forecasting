@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Usage Records | RMIMS</title>
+
+<link rel="stylesheet" href="../css/usage-records.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html" class="active">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ADMINISTRATION</p>
+
+            <a href="user-management.html">
+                User Management
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+                <h2>Usage Records</h2>
+                <span>Record and monitor material consumption</span>
+            </div>
+
+            <div class="header-actions">
+
+                <button id="notificationBtn">
+                    🔔
+                </button>
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- RECORD USAGE FORM -->
+
+        <section class="form-card">
+
+            <h3>Record Material Usage</h3>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Material</label>
+
+                    <select id="materialSelect">
+                        <option value="">
+                            Select Material
+                        </option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Used Quantity</label>
+
+                    <input
+                        type="number"
+                        id="usedQuantity"
+                        placeholder="Enter quantity used">
+                </div>
+
+                <div class="input-group">
+                    <label>Date</label>
+
+                    <input
+                        type="date"
+                        id="usageDate">
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Remarks</label>
+
+                    <textarea
+                        id="remarks"
+                        rows="4"
+                        placeholder="Enter remarks"></textarea>
+                </div>
+
+            </div>
+
+            <div class="form-buttons">
+
+                <button id="saveUsageBtn">
+                    Record Usage
+                </button>
+
+                <button id="clearBtn">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- USAGE TABLE -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h3>Usage History</h3>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Usage Records">
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Quantity Used</th>
+                        <th>Unit</th>
+                        <th>Date</th>
+                        <th>Remarks</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="usageTableBody">
+
+                    <!-- Firebase Data -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="../js/usage-records.js"></script>
+
+</body>
+</html>

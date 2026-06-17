@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings | RMIMS</title>
+
+<link rel="stylesheet" href="../css/settings.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ACCOUNT</p>
+
+            <a href="settings.html" class="active">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Settings</h2>
+
+                <span>
+                    Manage your account information
+                </span>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ACCOUNT INFORMATION -->
+
+        <section class="settings-card">
+
+            <h3>
+                Account Information
+            </h3>
+
+            <div class="settings-grid">
+
+                <div class="input-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                    type="text"
+                    id="fullName"
+                    readonly>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                    type="email"
+                    id="email"
+                    readonly>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Role
+                    </label>
+
+                    <input
+                    type="text"
+                    id="role"
+                    readonly>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SYSTEM INFORMATION -->
+
+        <section class="settings-card">
+
+            <h3>
+                System Information
+            </h3>
+
+            <div class="settings-grid">
+
+                <div class="input-group">
+
+                    <label>
+                        System Name
+                    </label>
+
+                    <input
+                    type="text"
+                    value="RMIMS"
+                    readonly>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Database
+                    </label>
+
+                    <input
+                    type="text"
+                    value="Firebase Firestore"
+                    readonly>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Version
+                    </label>
+
+                    <input
+                    type="text"
+                    value="Version 1.0"
+                    readonly>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECURITY -->
+
+        <section class="settings-card">
+
+            <h3>
+                Security
+            </h3>
+
+            <div class="button-group">
+
+                <button id="logoutBtn">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+type="module"
+src="../js/user-settings.js">
+</script>
+
+</body>
+</html>

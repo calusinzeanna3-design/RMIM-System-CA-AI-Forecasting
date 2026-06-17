@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RMIMS Login</title>
+
+<link rel="stylesheet" href="css/login.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+
+        <div class="brand">
+            <h1>RMIMS</h1>
+
+            <h2>
+                Raw Materials Inventory
+                Management System
+            </h2>
+
+            <p>
+                Consumption Analytics and
+                AI-Based Forecasting for MSMEs
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CENTER LOGIN -->
+    <div class="login-card">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <h2>LOGIN</h2>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter email"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required>
+            </div>
+
+            <div class="options">
+
+                <label>
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+
+                <a href="#">Forgot Password?</a>
+
+            </div>
+
+            <button type="submit" class="login-btn">
+                Log In
+            </button>
+
+        </form>
+
+        <details class="demo-box">
+            <summary>View Demo Accounts</summary>
+
+            <div class="demo-content">
+
+                <strong>Administrator</strong>
+
+                <p>admin@rmims.com</p>
+                <p>Admin123!</p>
+
+                <hr>
+
+                <strong>User</strong>
+
+                <p>user@rmims.com</p>
+                <p>User123!</p>
+
+            </div>
+
+        </details>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="right-panel">
+
+        <h3>System Overview</h3>
+
+        <div class="stat-card">
+            <span>Total Materials</span>
+            <h2>245</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>Available Stock</span>
+            <h2>12,680 KG</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>Monthly Consumption</span>
+            <h2>2,450 KG</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>Forecasted Demand</span>
+            <h2>3,750 KG</h2>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/login.js"></script>
+
+</body>
+</html>

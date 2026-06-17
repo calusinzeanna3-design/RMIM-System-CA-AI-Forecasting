@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Forecasting | RMIMS</title>
+
+<link rel="stylesheet" href="../css/forecasting.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html" class="active">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ACCOUNT</p>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>AI Forecasting</h2>
+
+                <span>
+                    View forecasted material requirements
+                </span>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- KPI CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <span>Total Forecasts</span>
+
+                <h2 id="totalForecasts">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Forecast Accuracy</span>
+
+                <h2 id="forecastAccuracy">
+                    95%
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Predicted Demand</span>
+
+                <h2 id="predictedDemand">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Suggested Reorders</span>
+
+                <h2 id="reorderCount">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <section class="chart-grid">
+
+            <div class="chart-card">
+
+                <h3>
+                    Demand Forecast Trend
+                </h3>
+
+                <canvas id="forecastChart">
+                </canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>
+                    Forecast Distribution
+                </h3>
+
+                <canvas id="distributionChart">
+                </canvas>
+
+            </div>
+
+        </section>
+
+        <!-- FORECAST RESULTS -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h3>
+                    Forecast Results
+                </h3>
+
+                <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Forecast">
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Current Stock</th>
+                        <th>Forecast Demand</th>
+                        <th>Suggested Reorder</th>
+                        <th>Suggested Reorder Date</th>
+                        <th>Confidence</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="forecastTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- INSIGHTS -->
+
+        <section class="insights">
+
+            <h3>
+                Forecast Insights
+            </h3>
+
+            <ul id="forecastInsights">
+
+                <li>
+                    Loading forecast insights...
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+type="module"
+src="../js/user-forecasting.js">
+</script>
+
+</body>
+</html>

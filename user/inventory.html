@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Inventory Management | RMIMS</title>
+
+<link rel="stylesheet" href="../css/inventory.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html" class="active">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ACCOUNT</p>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Inventory Management</h2>
+
+                <span>
+                    View available raw materials
+                </span>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- INVENTORY TABLE -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h3>
+                    Inventory List
+                </h3>
+
+                <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Material">
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Category</th>
+                        <th>Supplier</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="inventoryTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+type="module"
+src="../js/user-inventory.js">
+</script>
+
+</body>
+</html>

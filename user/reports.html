@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reports & Decision Support | RMIMS</title>
+
+<link rel="stylesheet" href="../css/reports.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html" class="active">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ACCOUNT</p>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Reports & Decision Support</h2>
+
+                <span>
+                    View inventory reports and recommendations
+                </span>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button id="printBtn">
+                    Print Report
+                </button>
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- KPI CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <span>Total Materials</span>
+
+                <h2 id="totalMaterials">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Low Stock Items</span>
+
+                <h2 id="lowStockItems">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Total Usage Records</span>
+
+                <h2 id="totalUsageRecords">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Forecast Recommendations</span>
+
+                <h2 id="forecastRecommendations">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- INVENTORY REPORT -->
+
+        <section class="table-card">
+
+            <h3>
+                Inventory Summary Report
+            </h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="inventoryReportBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- LOW STOCK REPORT -->
+
+        <section class="table-card">
+
+            <h3>
+                Low Stock Report
+            </h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Current Stock</th>
+                        <th>Minimum Threshold</th>
+                        <th>Suggested Reorder</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="lowStockReportBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- FORECAST REPORT -->
+
+        <section class="table-card">
+
+            <h3>
+                Forecast Summary Report
+            </h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Forecast Demand</th>
+                        <th>Suggested Reorder</th>
+                        <th>Confidence</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="forecastReportBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- DECISION SUPPORT -->
+
+        <section class="insights">
+
+            <h3>
+                Decision Support Recommendations
+            </h3>
+
+            <ul id="decisionSupportList">
+
+                <li>
+                    Loading recommendations...
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+type="module"
+src="../js/user-reports.js">
+</script>
+
+</body>
+</html>

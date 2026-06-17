@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RMIMS Dashboard</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ADMINISTRATION</p>
+
+            <a href="user-management.html">
+                User Management
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Dashboard</h2>
+
+                <span>
+                    Welcome to RMIMS
+                </span>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button id="notificationBtn">
+                    🔔
+                </button>
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- KPI CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <span>Total Materials</span>
+
+                <h2 id="totalMaterials">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Total Stock</span>
+
+                <h2 id="totalStock">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Low Stock</span>
+
+                <h2 id="lowStock">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Inventory Health</span>
+
+                <h2 id="inventoryHealth">
+                    0%
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <section class="chart-grid">
+
+            <div class="chart-card">
+
+                <h3>
+                    Monthly Consumption Trend
+                </h3>
+
+                <canvas id="consumptionChart">
+                </canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>
+                    Forecast Summary
+                </h3>
+
+                <canvas id="forecastChart">
+                </canvas>
+
+            </div>
+
+        </section>
+
+        <!-- TABLES -->
+
+        <section class="table-grid">
+
+            <!-- LOW STOCK -->
+
+            <div class="table-card">
+
+                <h3>
+                    Low Stock Alerts
+                </h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Material</th>
+                            <th>Qty</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="lowStockTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- TOP CONSUMED -->
+
+            <div class="table-card">
+
+                <h3>
+                    Top Consumed Materials
+                </h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Material</th>
+                            <th>Usage</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="topConsumedTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- INSIGHTS -->
+
+        <section class="insights">
+
+            <h3>
+                Quick Insights
+            </h3>
+
+            <ul id="insightsList">
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+type="module"
+src="../js/dashboard.js">
+</script>
+
+</body>
+</html>

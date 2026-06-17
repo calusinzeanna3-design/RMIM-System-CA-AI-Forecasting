@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Consumption Analytics | RMIMS</title>
+
+<link rel="stylesheet" href="../css/analytics.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            RMIMS
+        </div>
+
+        <div class="menu">
+
+            <p class="section">MAIN</p>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <p class="section">INVENTORY</p>
+
+            <a href="inventory.html">
+                Inventory Management
+            </a>
+
+            <a href="usage-records.html">
+                Usage Records
+            </a>
+
+            <p class="section">ANALYTICS</p>
+
+            <a href="analytics.html" class="active">
+                Consumption Analytics
+            </a>
+
+            <a href="forecasting.html">
+                AI Forecasting
+            </a>
+
+            <p class="section">REPORTS</p>
+
+            <a href="reports.html">
+                Reports & Decision Support
+            </a>
+
+            <p class="section">ADMINISTRATION</p>
+
+            <a href="user-management.html">
+                User Management
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Consumption Analytics</h2>
+                <span>Analyze raw material consumption patterns</span>
+            </div>
+
+            <div class="header-actions">
+
+                <button id="notificationBtn">
+                    🔔
+                </button>
+
+                <button id="profileBtn">
+                    Loading...
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- KPI CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <span>Total Usage Records</span>
+
+                <h2 id="totalUsageRecords">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Most Used Material</span>
+
+                <h2 id="mostUsedMaterial">
+                    -
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Least Used Material</span>
+
+                <h2 id="leastUsedMaterial">
+                    -
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Total Consumption</span>
+
+                <h2 id="totalConsumption">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <section class="chart-grid">
+
+            <div class="chart-card">
+
+                <h3>
+                    Material Consumption Trend
+                </h3>
+
+                <canvas id="consumptionChart">
+                </canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>
+                    Consumption Distribution
+                </h3>
+
+                <canvas id="distributionChart">
+                </canvas>
+
+            </div>
+
+        </section>
+
+        <!-- ANALYTICS TABLE -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h3>
+                    Material Consumption Summary
+                </h3>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Material">
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+
+                        <th>Total Consumption</th>
+
+                        <th>Frequency</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="analyticsTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- INSIGHTS -->
+
+        <section class="insights">
+
+            <h3>
+                Consumption Insights
+            </h3>
+
+            <ul id="insightsList">
+
+                <li>
+                    Loading insights...
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module"
+src="../js/analytics.js">
+</script>
+
+</body>
+</html>
