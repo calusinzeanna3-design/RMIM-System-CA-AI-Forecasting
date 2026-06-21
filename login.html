@@ -1,51 +1,93 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RMIMS Login</title>
 
 <link rel="stylesheet" href="css/login.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
 <div class="login-container">
 
-    <!-- LEFT PANEL -->
-    <div class="left-panel">
 
-        <div class="brand">
-            <h1>RMIMS</h1>
+<!-- LEFT PANEL -->
 
-            <h2>
-                Raw Materials Inventory
-                Management System
-            </h2>
+<div class="left-panel">
 
-            <p>
-                Consumption Analytics and
-                AI-Based Forecasting for MSMEs
-            </p>
+    <div class="brand-mark">
+
+        <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L21 7V17L12 22L3 17V7L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M12 2V22M3 7L12 12M21 7L12 12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="brand-name">
+            RMIMS
+            <span>Raw Material Inventory<br>Management System</span>
         </div>
 
     </div>
 
-    <!-- CENTER LOGIN -->
-    <div class="login-card">
-
-        <div class="logo">
-            RMIMS
+    <div class="left-panel-shelves" aria-hidden="true">
+        <div class="shelf-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.4"/>
+                <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.4"/>
+                <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.4"/>
+                <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
         </div>
+        <div class="shelf-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 20V10M9 20V4M15 20V13M21 20V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
 
-        <h2>LOGIN</h2>
+</div>
 
-        <form id="loginForm">
+<!-- CENTER LOGIN -->
 
-            <div class="input-group">
-                <label>Email Address</label>
+<div class="login-card">
+
+    <div class="card-top-bar"></div>
+
+    <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L21 7V17L12 22L3 17V7L12 2Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M12 2V22M3 7L12 12M21 7L12 12" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+    <h1 class="card-title">RMIMS</h1>
+    <p class="card-tagline">Smart Inventory, Smarter Decisions</p>
+
+    <div class="divider"><span>LOGIN</span></div>
+
+    <form id="loginForm">
+
+        <div class="input-group">
+
+            <label for="email">Email Address</label>
+
+            <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6.5L12 13L21 6.5M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 <input
                     type="email"
                     id="email"
@@ -53,82 +95,185 @@
                     required>
             </div>
 
-            <div class="input-group">
-                <label>Password</label>
+        </div>
+
+        <div class="input-group">
+
+            <label for="password">Password</label>
+
+            <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
                 <input
                     type="password"
                     id="password"
                     placeholder="Enter password"
                     required>
+                <button type="button" class="toggle-pw" id="togglePw" aria-label="Show password">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 12C2 12 5.5 5 12 5C18.5 5 22 12 22 12C22 12 18.5 19 12 19C5.5 19 2 12 2 12Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+                    </svg>
+                </button>
             </div>
 
-            <div class="options">
+        </div>
 
-                <label>
-                    <input type="checkbox">
-                    Remember Me
-                </label>
+        <div class="options">
 
-                <a href="#">Forgot Password?</a>
+            <label class="remember">
 
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Remember Me
+
+            </label>
+
+            <a href="#">
+                Forgot Password?
+            </a>
+
+        </div>
+
+        <button
+            type="submit"
+            class="login-btn">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Log In
+
+        </button>
+
+    </form>
+
+    <details class="demo-box">
+
+        <summary>
+            View Demo Accounts
+        </summary>
+
+        <div class="demo-content">
+
+            <div class="demo-account">
+                <strong>
+                    Administrator
+                </strong>
+
+                <p>
+                    admin@rmims.com
+                </p>
+
+                <p>
+                    Admin123!
+                </p>
             </div>
 
-            <button type="submit" class="login-btn">
-                Log In
-            </button>
+            <hr>
 
-        </form>
+            <div class="demo-account">
+                <strong>
+                    User
+                </strong>
 
-        <details class="demo-box">
-            <summary>View Demo Accounts</summary>
+                <p>
+                    user@rmims.com
+                </p>
 
-            <div class="demo-content">
-
-                <strong>Administrator</strong>
-
-                <p>admin@rmims.com</p>
-                <p>Admin123!</p>
-
-                <hr>
-
-                <strong>User</strong>
-
-                <p>user@rmims.com</p>
-                <p>User123!</p>
-
+                <p>
+                    User123!
+                </p>
             </div>
 
-        </details>
+        </div>
+
+    </details>
+
+    <p class="card-footer">
+        Transforming Raw Material Management<br>
+        Through Analytics and AI Forecasting
+    </p>
+
+</div>
+
+<!-- RIGHT PANEL -->
+
+<div class="right-panel">
+
+    <h3>
+        System Overview
+    </h3>
+
+    <div class="stat-card">
+
+        <div class="stat-text">
+            <span>Total Raw Materials</span>
+            <h2 id="totalMaterials">0</h2>
+        </div>
+
+        <div class="stat-icon icon-cube">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L21 7V17L12 22L3 17V7L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M12 2V22M3 7L12 12M21 7L12 12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+        </div>
 
     </div>
 
-    <!-- RIGHT PANEL -->
+    <div class="stat-card">
 
-    <div class="right-panel">
-
-        <h3>System Overview</h3>
-
-        <div class="stat-card">
-            <span>Total Materials</span>
-            <h2>245</h2>
-        </div>
-
-        <div class="stat-card">
+        <div class="stat-text">
             <span>Available Stock</span>
-            <h2>12,680 KG</h2>
+            <h2 id="availableStock">0 KG</h2>
         </div>
 
-        <div class="stat-card">
-            <span>Monthly Consumption</span>
-            <h2>2,450 KG</h2>
-        </div>
-
-        <div class="stat-card">
-            <span>Forecasted Demand</span>
-            <h2>3,750 KG</h2>
+        <div class="stat-icon icon-stock">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M4 6V18C4 19.6569 7.58172 21 12 21C16.4183 21 20 19.6569 20 18V6" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M4 12C4 13.6569 7.58172 15 12 15C16.4183 15 20 13.6569 20 12" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
         </div>
 
     </div>
+
+    <div class="stat-card">
+
+        <div class="stat-text">
+            <span>Monthly Consumption</span>
+            <h2 id="monthlyConsumption">0 KG</h2>
+        </div>
+
+        <div class="stat-icon icon-trend-up">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 7H21V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-text">
+            <span>Forecasted Demand</span>
+            <h2 id="forecastDemand">0 KG</h2>
+        </div>
+
+        <div class="stat-icon icon-forecast">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="21" cy="7" r="2" fill="currentColor"/>
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+
 
 </div>
 
